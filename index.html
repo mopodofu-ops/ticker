@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+  body{
+    margin:0;
+    padding:0;
+    background:transparent;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  }
+
+  .wrap{
+    padding: 12px 0;
+  }
+
+  .bar{
+    position: relative;
+    overflow: hidden;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,.08);
+    background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(255,255,255,.8));
+    padding: 10px 0;
+    box-shadow: 0 10px 24px rgba(0,0,0,.06);
+  }
+
+  .bar:before,
+  .bar:after{
+    content:"";
+    position:absolute;
+    top:0; bottom:0;
+    width:60px;
+    pointer-events:none;
+  }
+  .bar:before{
+    left:0;
+    background: linear-gradient(90deg, #fff, rgba(255,255,255,0));
+  }
+  .bar:after{
+    right:0;
+    background: linear-gradient(270deg, #fff, rgba(255,255,255,0));
+  }
+
+  .track{
+    display:inline-flex;
+    gap:12px;
+    padding-left:30px;
+    white-space:nowrap;
+    animation: move 26s linear infinite;
+  }
+
+  .bar:hover .track{
+    animation-play-state: paused;
+  }
+
+  .chip{
+    padding:8px 14px;
+    border-radius:999px;
+    border:1px solid rgba(0,0,0,.08);
+    background: rgba(255,255,255,.85);
+    font-weight:600;
+    font-size:14px;
+    color: rgba(0,0,0,.82);
+  }
+
+  @keyframes move{
+    0%{ transform: translateX(0); }
+    100%{ transform: translateX(-50%); }
+  }
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="bar">
+      <div class="track">
+        <span class="chip">AZVC</span>
+        <span class="chip">Impellent Ventures</span>
+        <span class="chip">CP Overture</span>
+        <span class="chip">PL Capital</span>
+        <span class="chip">Ascend</span>
+        <span class="chip">UNTUCKIT</span>
+        <span class="chip">Datapoint Capital</span>
+        <span class="chip">NYS Ventures</span>
+        <span class="chip">Averin Capital</span>
+        <span class="chip">TBD Angels</span>
+        <span class="chip">Launchpad Angel Group</span>
+        <span class="chip">Evio.VC</span>
+        <span class="chip">Logos</span>
+        <span class="chip">Maine Venture Fund</span>
+        <span class="chip">Oaktree Capital Management</span>
+
+        <!-- duplicate -->
+        <span class="chip">AZVC</span>
+        <span class="chip">Impellent Ventures</span>
+        <span class="chip">CP Overture</span>
+        <span class="chip">PL Capital</span>
+        <span class="chip">Ascend</span>
+        <span class="chip">UNTUCKIT</span>
+        <span class="chip">Datapoint Capital</span>
+        <span class="chip">NYS Ventures</span>
+        <span class="chip">Averin Capital</span>
+        <span class="chip">TBD Angels</span>
+        <span class="chip">Launchpad Angel Group</span>
+        <span class="chip">Evio.VC</span>
+        <span class="chip">Logos</span>
+        <span class="chip">Maine Venture Fund</span>
+        <span class="chip">Oaktree Capital Management</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
